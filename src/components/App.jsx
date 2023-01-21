@@ -11,7 +11,13 @@ import transactionsData from '../data/transactions';
 export const App = () => {
   return (
     <>
-      <Profile data={userData} />;
+      <Profile
+        username={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+        avatar={userData.avatar}
+        stats={userData.stats}
+      />
       <Statistics title="Upload stats" stats={statsData} />
       <FriendList friends={friendsData} />
       <TransactionHistory items={transactionsData} />
